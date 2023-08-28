@@ -37,3 +37,16 @@ console.log(isNaN(someRandom))
 
 console.log(2==="2")    //Difference in it you can see while running the code.
 console.log(2=="2")
+
+//Example for prefix and postfix
+
+//Prefix
+let x=3
+let y=++x
+console.log(y)
+
+//Postfix
+let x2=3
+let y2=x2++
+let y3=x2
+console.log(y2);
