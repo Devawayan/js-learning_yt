@@ -56,4 +56,14 @@ console.log(Math.min(5,6,7,69));
 //Random function in math library is used to denote random numbers it provide number between 0-1
 console.log(Math.random());
 //To remove the 0-1 you need to follow the steps
-console.log(Math.random()*10 +1);
+console.log((Math.random()*10) +1);
+
+//you can easily define some random value inside the range you want to avoid the cases.
+
+let min=30
+let max=50
+console.log(Math.floor(Math.random()*(max-min+1))+min)
+
+//in this Math.floor is used to round off the Value.
+//math.random is used to produce some random number 
+//*(max-min+1))+min it is used to multiply the difference between the min and max value and adding 1 to avoid 0 in the number +min is done to be in the range of min-max..
