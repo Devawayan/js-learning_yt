@@ -1,6 +1,6 @@
 //we can Declare Nested Array one array inside an Array.
 
-const myArr=[0,10,20,30,40, myArr2=[100,200,300]]
+const myArr=[0,1,2,3,4,5]
 console.log(myArr);
 
 //For accessing Array we ca use Index Number
@@ -35,3 +35,17 @@ console.log(myArr3.indexOf(69));
 //Joining of array  (It also Changes Data type to String)
 const myArr4=myArr3.join()
 console.log(myArr4);
+
+//Slice And Splice Method
+//Original Array
+console.log("A", myArr);
+
+//Slice is used
+console.log("B", myArr);
+const myn1=myArr.slice(1,3)
+console.log(myn1);
+
+//Splice is used
+const myn2=myArr.splice(1,3)
+console.log("C", myArr);
+console.log(myn2);
