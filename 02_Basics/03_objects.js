@@ -1,4 +1,6 @@
 //defining symbol
+
+//It is a Non SingleTon Object and its declaration is myobj={}
 const mysym=Symbol("Key2")
 
 const myobj={
