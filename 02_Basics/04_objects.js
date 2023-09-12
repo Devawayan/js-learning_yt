@@ -30,3 +30,8 @@ console.log(myobj4);
 
 const myobj5 = {...myobj1,...myobj2,...myobj3}
 console.log(myobj5);
+
+//To check the property under a object we use hasOwnProperty
+//It returns value on True or false.
+console.log(regularUser.hasOwnProperty('fullname'));
+console.log(regularUser.fullname.userfullname.hasOwnProperty('firstname'));
