@@ -17,3 +17,5 @@ const programming=["js","rb","py","cpp"]
 for (const key in programming) {
    console.log(programming[key]);
 }
+
+//map is not itreatable in the for in Loop so it is not printed and no output is shown.
