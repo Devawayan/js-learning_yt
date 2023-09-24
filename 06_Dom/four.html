@@ -11,6 +11,8 @@
     </ul>
 </body>
 <script>
+
+    //Entering Values.
     function addLanguage(langname){
        const li= document.createElement("li");
         li.innerHTML= `${langname}`
@@ -18,7 +20,60 @@
     }
     addLanguage("Python")
     addLanguage("C++")
-    addLanguage('Ruby')
 
+    function optiLanguage(langName){
+       const li= document.createElement('li')
+       li.appendChild(document.createTextNode(langName))
+       document.querySelector('.language').appendChild(li)
+    }
+        optiLanguage("Js")
+
+
+    function enter(langName){
+        const newEnter=document.createElement('li')
+        newEnter.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(newEnter)
+    }
+
+    enter("Ruby")
+
+    function enter2(langName){
+        const newli3=document.createElement('li')
+        newli3.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(newli3)
+    }
+
+    enter2("DBMS")
+    enter2("Kotlin")
+
+
+    //values Edit.
+
+    const secondLang=document.querySelector('li:nth-child(2)')
+    //not optimised Way.
+    //with InnerHTML.
+    //secondLang.innerHTML='Mojo'
+
+    const newLi=document.createElement('li')
+    newLi.textContent="Mojo"
+    secondLang.replaceWith(newLi)
+
+    //By replacing the HTML file
+    const thirdLang=document.querySelector('li:nth-child(4)')
+    const newLi2=document.createElement('li')
+    newLi2.textContent="C#"
+    thirdLang.replaceWith(newLi2)
+
+    const firstLang=document.querySelector('li:nth-child(1)')
+    //Method of outer HTML to Change the Elements of HTMl
+    firstLang.outerHTML="<li>TypeScript</li>"
+
+
+    //Remove.
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+
+    const lastLang2=document.querySelector('li:nth-child(7)')
+    lastLang2.remove()
 </script>
 </html>
