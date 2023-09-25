@@ -12,6 +12,12 @@
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
+// const grey = document.querySelector('#grey');
+// const white = document.querySelector('#white');
+// const blue = document.querySelector('#blue');
+// const yellow = document.querySelector('#yellow');
+// const Magenta = document.querySelector('#Magenta');
+
 buttons.forEach((button) => {
   button.addEventListener('click', function (e) {
     console.log(e);
@@ -43,6 +49,33 @@ buttons.forEach((button) => {
     }
   });
 });
+
+//  Using Solo Methods...
+
+// grey.addEventListener('click', function (e) {
+//   console.log(e.target);
+//   body.style.backgroundColor = e.target.id;
+// });
+
+// white.addEventListener('click', function (e) {
+//   console.log(e.target);
+//   body.style.backgroundColor = e.target.id;
+// });
+
+// blue.addEventListener('click', function (e) {
+//   console.log(e.target);
+//   body.style.backgroundColor = e.target.id;
+// });
+
+// yellow.addEventListener('click', function (e) {
+//   console.log(e.target);
+//   body.style.backgroundColor = e.target.id;
+// });
+
+// Magenta.addEventListener('click', function (e) {
+//   console.log(e.target);
+//   body.style.backgroundColor = e.target.id;
+// });
 
 
 ```
