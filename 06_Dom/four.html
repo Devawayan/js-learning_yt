@@ -13,39 +13,47 @@
 <script>
 
     //Entering Values.
-    function addLanguage(langname){
-       const li= document.createElement("li");
-        li.innerHTML= `${langname}`
-        document.querySelector('.language').appendChild(li)
-    }
-    addLanguage("Python")
-    addLanguage("C++")
+    // function addLanguage(langname){
+    //    const li= document.createElement("li");
+    //     li.innerHTML= `${langname}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("Python")
+    // addLanguage("C++")
 
-    function optiLanguage(langName){
-       const li= document.createElement('li')
-       li.appendChild(document.createTextNode(langName))
-       document.querySelector('.language').appendChild(li)
-    }
-        optiLanguage("Js")
+    // function optiLanguage(langName){
+    //    const li= document.createElement('li')
+    //    li.appendChild(document.createTextNode(langName))
+    //    document.querySelector('.language').appendChild(li)
+    // }
+    //     optiLanguage("Js")
 
 
-    function enter(langName){
-        const newEnter=document.createElement('li')
-        newEnter.appendChild(document.createTextNode(langName))
-        document.querySelector('.language').appendChild(newEnter)
-    }
+    // function enter(langName){
+    //     const newEnter=document.createElement('li')
+    //     newEnter.appendChild(document.createTextNode(langName))
+    //     document.querySelector('.language').appendChild(newEnter)
+    // }
 
-    enter("Ruby")
+    // enter("Ruby")
 
-    function enter2(langName){
-        const newli3=document.createElement('li')
-        newli3.appendChild(document.createTextNode(langName))
-        document.querySelector('.language').appendChild(newli3)
-    }
+    // function enter2(langName){
+    //     const newli3=document.createElement('li')
+    //     newli3.appendChild(document.createTextNode(langName))
+    //     document.querySelector('.language').appendChild(newli3)
+    // }
 
-    enter2("DBMS")
-    enter2("Kotlin")
+    // enter2("DBMS")
+    // enter2("Kotlin")
 
+
+    const html= document.querySelector('.language')
+    const val=`<li>Ruby</li>
+    <li>C++</li>
+    <li>C#</li>
+    <li>Python</li>`
+
+    html.insertAdjacentHTML("beforeend",val)
 
     //values Edit.
 
