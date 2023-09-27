@@ -93,17 +93,35 @@ form.addEventListener('submit', function (e) {
   const results = document.querySelector('#results');
 
   if (height === '' || height < 0 || isNaN(height)) {
-    results.innerHTML = 'Please give a valid height';
+    results.innerHTML = 'Please Provide a Valid Height';
   } else if (weight === '' || weight < 0 || isNaN(weight)) {
-    results.innerHTML = 'Please give a valid weight';
-  } else{
-    const bmi=(weight/ ((height*height)/10000)).toFixed(2)
+    results.innerHTML = 'Please Provide a Valid Weight';
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
 
-    //result according to formulae
-    results.innerHTML=`<span>${bmi}</span>`
+    //For Displaying the Result
+    const bmiDisplay = document.createElement('h2');
+    bmiDisplay.textContent = bmi;
+
+    //For Adding Text according to Situation.
+
+    const bmiMessageDisplay = document.createElement('h3');
+
+    if (bmi < 18.6) {
+      bmiMessageDisplay.textContent = 'Under Weight';
+    } else if (bmi > 18.6 && bmi < 24.9) {
+      bmiMessageDisplay.textContent = `Normal Range`;
+    } else if (bmi > 24.9) {
+      bmiMessageDisplay.textContent = `Overweight`;
+    } else {
+      bmiMessageDisplay.textContent = `Wrong Entry`;
+    }
+
+    results.appendChild(bmiDisplay);
+    results.appendChild(bmiMessageDisplay);
   }
-
 });
+
 
 
 ```
