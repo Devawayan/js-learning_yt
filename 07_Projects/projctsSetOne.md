@@ -130,5 +130,19 @@ form.addEventListener('submit', function (e) {
 
 ``` javascript
 
+//With GetElementById..
+const time = document.getElementById('clock');
+setInterval(function () {
+  let date = new Date();
+  time.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+//With QuerySelector..
+// const time = document.querySelector('#clock');
+// setInterval(function () {
+//   let date = new Date();
+//   time.innerHTML = date.toLocaleTimeString();
+// }, 1000);
+
 
 ```
