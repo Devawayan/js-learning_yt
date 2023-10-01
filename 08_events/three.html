@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Three</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Async Js Project part</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //In this function the Str function is used to pass String
+    const name= function(str,int){
+        console.log(str,int, Date.now());
+    }
+
+    //We can set different parameters at a time atleast 2 is needed.
+
+    const Interval=
+    setInterval(name, 1000,"lucky Number",69)
+
+    //clear Interval is used to clear the given intervals and stop the event.
+
+    clearInterval(Interval)
+
+    //applying it on Buttons
+
+    let intervalId
+
+    const start=document.querySelector('#start').addEventListener('click', function(){
+       intervalId = setInterval(name, 1000,"lucky Number",69)
+
+    })
+
+    const stop = document.getElementById('stop').addEventListener('click', function(){
+
+       clearInterval(intervalId)
+    })
+</script>
+</html>
