@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    <style>
+        .cont{
+            align-items: center;
+            height: 80px;
+            display:flex;
+            justify-content: center;
+        }
+        h2{
+            color: aliceblue;
+            margin-left: 40%;
+        }
+        #show{
+            margin-top: -40px;
+        }
+        .output{
+            color: aliceblue;
+        }
+    </style>
+    <div class="cont">
+        <button id="show">Show</button>
+    </div>
+    <div class="output"></div>
+</body>
+<script>
+    // const requestUrl='https://api.github.com/users/Devawayan'
+    // const xml =  new XMLHttpRequest();
+    // xml.open('GET', requestUrl)
+//     xml.onreadystatechange=function(){
+//         console.log(xml.readyState);
+//             if (xml.readyState === 4) {
+//                 const data= JSON.parse(this.response)
+//                 console.log(this.response);
+//                 console.log(`Followers ${data.followers}`);
+//             }
+//     }
+//   xml.send();
+
+  //Creating a Card and a div using Js
+
+    const result= document.querySelector('.output')
+    const html=document.querySelector('.cont')
+    const value=`<h2>Showing Basic Details using API</h2>`
+
+    html.insertAdjacentHTML("beforebegin",value)
+
+    //clicking event
+    const btn=document.getElementById('show')
+    btn.addEventListener('click', function(){
+        console.log("click");
+        const requestUrl='https://api.github.com/users/Devawayan'
+        const xml =  new XMLHttpRequest();
+        xml.open('GET', requestUrl)
+        xml.onreadystatechange=function(){
+            if (xml.readyState === 4) {
+                const data=JSON.parse(this.response)
+                
+                result.innerHTML=`
+                The Image of the Person in Url is ${data.avatar_url};
+                The Follower of the Person in Url is ${data.followers}`
+            }
+        };
+
+        xml.send()
+    })
+
+    
+
+</script>
+</html>
