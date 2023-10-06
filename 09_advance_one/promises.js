@@ -77,3 +77,38 @@ const promiseFive= new Promise((resolve,reject)=>{
 
 // Method 2 Async Await Syntax to ensure that the work is done (Blocking Code)
 
+async function consumePromiseFive(){
+  try {
+    const response= await promiseFive
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+} 
+
+consumePromiseFive()
+
+//api call using blocking method async await.
+
+async function users(){
+    try {
+       const response = await fetch('https://api.github.com/users/Devawayan')
+       const data = await response.json()
+       console.log(data);
+    } catch (error) {
+        console.log("E: ",error);
+    } 
+}
+users()
+
+//Using then method in non blocking code.
+// fetch('https://api.github.com/users/Devawayan')
+// .then((response)=>{
+//     return response.json()
+// })
+// .then((data)=> {
+//     console.log(data);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
