@@ -13,6 +13,8 @@ const user = {
 // console.log(user)
 // console.log(this);
 
+//In this the Abstraction and Encapsulation is taking Place..
+
 function User(username, isLoggedIn, loginCount){
     this.username=username;
     this.isLoggedIn=isLoggedIn;
